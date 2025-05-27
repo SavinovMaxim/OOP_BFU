@@ -1,0 +1,157 @@
+{
+    "a": {
+        "command_type": "PrintCharCommand",
+        "char": "a"
+    },
+    "b": {
+        "command_type": "PrintCharCommand",
+        "char": "b"
+    },
+    "c": {
+        "command_type": "PrintCharCommand",
+        "char": "c"
+    },
+    "d": {
+        "command_type": "PrintCharCommand",
+        "char": "d"
+    },
+    "e": {
+        "command_type": "PrintCharCommand",
+        "char": "e"
+    },
+    "f": {
+        "command_type": "PrintCharCommand",
+        "char": "f"
+    },
+    "g": {
+        "command_type": "PrintCharCommand",
+        "char": "g"
+    },
+    "h": {
+        "command_type": "PrintCharCommand",
+        "char": "h"
+    },
+    "i": {
+        "command_type": "PrintCharCommand",
+        "char": "i"
+    },
+    "j": {
+        "command_type": "PrintCharCommand",
+        "char": "j"
+    },
+    "k": {
+        "command_type": "PrintCharCommand",
+        "char": "k"
+    },
+    "l": {
+        "command_type": "PrintCharCommand",
+        "char": "l"
+    },
+    "m": {
+        "command_type": "PrintCharCommand",
+        "char": "m"
+    },
+    "n": {
+        "command_type": "PrintCharCommand",
+        "char": "n"
+    },
+    "o": {
+        "command_type": "PrintCharCommand",
+        "char": "o"
+    },
+    "p": {
+        "command_type": "PrintCharCommand",
+        "char": "p"
+    },
+    "q": {
+        "command_type": "PrintCharCommand",
+        "char": "q"
+    },
+    "r": {
+        "command_type": "PrintCharCommand",
+        "char": "r"
+    },
+    "s": {
+        "command_type": "PrintCharCommand",
+        "char": "s"
+    },
+    "t": {
+        "command_type": "PrintCharCommand",
+        "char": "t"
+    },
+    "u": {
+        "command_type": "PrintCharCommand",
+        "char": "u"
+    },
+    "v": {
+        "command_type": "PrintCharCommand",
+        "char": "v"
+    },
+    "w": {
+        "command_type": "PrintCharCommand",
+        "char": "w"
+    },
+    "x": {
+        "command_type": "PrintCharCommand",
+        "char": "x"
+    },
+    "y": {
+        "command_type": "PrintCharCommand",
+        "char": "y"
+    },
+    "z": {
+        "command_type": "PrintCharCommand",
+        "char": "z"
+    },
+    "0": {
+        "command_type": "PrintCharCommand",
+        "char": "0"
+    },
+    "1": {
+        "command_type": "PrintCharCommand",
+        "char": "1"
+    },
+    "2": {
+        "command_type": "PrintCharCommand",
+        "char": "2"
+    },
+    "3": {
+        "command_type": "PrintCharCommand",
+        "char": "3"
+    },
+    "4": {
+        "command_type": "PrintCharCommand",
+        "char": "4"
+    },
+    "5": {
+        "command_type": "PrintCharCommand",
+        "char": "5"
+    },
+    "6": {
+        "command_type": "PrintCharCommand",
+        "char": "6"
+    },
+    "7": {
+        "command_type": "PrintCharCommand",
+        "char": "7"
+    },
+    "8": {
+        "command_type": "PrintCharCommand",
+        "char": "8"
+    },
+    "9": {
+        "command_type": "PrintCharCommand",
+        "char": "9"
+    },
+    "ctrl++": {
+        "command_type": "VolumeUpCommand",
+        "increment": 20
+    },
+    "ctrl+-": {
+        "command_type": "VolumeDownCommand",
+        "decrement": 20
+    },
+    "ctrl+p": {
+        "command_type": "MediaPlayerCommand"
+    }
+}
