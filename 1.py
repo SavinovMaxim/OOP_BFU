@@ -1,4 +1,4 @@
-from typing import Self
+from typing_extensions import Self
 
 
 def check_coordinate(value: int, limit: int) -> int:
