@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from entities.user import User
+from data.user import User
 
 
 class AuthServiceProtocol(Protocol):

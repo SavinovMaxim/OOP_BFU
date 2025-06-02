@@ -2,11 +2,9 @@ import json
 import logging
 from pathlib import Path
 
-from config import ENCODING
-from entities.user import User
+from data.user import User
 from protocols.auth import AuthServiceProtocol
 from protocols.user import UserRepositoryProtocol
-
 
 class AuthService(AuthServiceProtocol):
     def __init__(self, session_file: str = "session.json", repo: UserRepositoryProtocol = None):
@@ -18,12 +16,20 @@ class AuthService(AuthServiceProtocol):
     def _load_session(self):
         if self.session_file.exists():
             try:
-                with open(self.session_file, 'r', encoding=ENCODING) as f:
+                with open(self.session_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                    user = self.repo.get_by_id(data["id"]) if self.repo else None
-                    self._current_user = user
+                    if self.repo:
+                        user = self.repo.get_by_id(data["id"])
+                        self._current_user = user
+                    else:
+                        logging.error("UserRepository not provided. Cannot load session.")
+            except json.JSONDecodeError:
+                logging.error(f"Invalid JSON in '{self.session_file}'")
+            except KeyError:
+                logging.error(f"'id' key not found in '{self.session_file}'")
             except Exception as e:
                 logging.error(f"Error reading '{self.session_file}': {e}")
+
 
     def _save_session(self):
         if self._current_user:
@@ -31,7 +37,8 @@ class AuthService(AuthServiceProtocol):
                 with open(self.session_file, 'w', encoding='utf-8') as f:
                     json.dump({"id": self._current_user.id}, f)
             except Exception as e:
-                logging.error(f'Error saving session file: {e}')
+                logging.error(f'Error saving session file: {e}, current user id: {self._current_user.id}')
+
 
     def sign_in(self, user: User) -> None:
         self._current_user = user
@@ -49,3 +56,4 @@ class AuthService(AuthServiceProtocol):
     @property
     def current_user(self) -> User | None:
         return self._current_user
+
