@@ -1,0 +1,61 @@
+{
+    "text": "ab",
+    "key_bindings": {
+        "a": {
+            "class": "PrintCharCommand",
+            "state": {
+                "char": "a"
+            }
+        },
+        "b": {
+            "class": "PrintCharCommand",
+            "state": {
+                "char": "b"
+            }
+        },
+        "c": {
+            "class": "PrintCharCommand",
+            "state": {
+                "char": "c"
+            }
+        },
+        "d": {
+            "class": "PrintCharCommand",
+            "state": {
+                "char": "d"
+            }
+        },
+        "ctrl++": {
+            "class": "VolumeUpCommand",
+            "state": {
+                "amount": 20,
+                "current_volume": 70
+            }
+        },
+        "ctrl+-": {
+            "class": "VolumeDownCommand",
+            "state": {
+                "amount": 20,
+                "current_volume": 30
+            }
+        },
+        "ctrl+p": {
+            "class": "MediaPlayerCommand",
+            "state": {
+                "is_playing": false
+            }
+        },
+        "undo": null,
+        "redo": null
+    },
+    "history": [
+        "a",
+        "b",
+        "ctrl++",
+        "ctrl+-"
+    ],
+    "undo_stack": [
+        "d",
+        "ctrl+p"
+    ]
+}

@@ -1,0 +1,13 @@
+a
+ab
+abc
+undo: ab
+undo: a
+redo: ab
+volume increased +20% (now: 70%)
+volume decreased -20% (now: 30%)
+media player launched
+abd
+undo: ab
+undo: media player closed
+Keyboard state saved

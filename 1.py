@@ -1,6 +1,11 @@
 from typing_extensions import Self
 
 
+# Выносим константы в глобальную область видимости модуля
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+
 def check_coordinate(value: int, limit: int) -> int:
     if not 0 <= value <= limit:
         raise ValueError(f"Coordinate must be between 0 and {limit}")
@@ -8,9 +13,6 @@ def check_coordinate(value: int, limit: int) -> int:
 
 
 class Point2d:
-    WIDTH = 800  # Изменил названия констант согласно заданию
-    HEIGHT = 600
-
     def __init__(self, x: int, y: int):
         self.x = x  # Инициализация через свойства
         self.y = y
@@ -21,7 +23,7 @@ class Point2d:
 
     @x.setter
     def x(self, value: int):
-        self._x = check_coordinate(value, self.WIDTH)
+        self._x = check_coordinate(value, SCREEN_WIDTH)
 
     @property
     def y(self) -> int:
@@ -29,7 +31,7 @@ class Point2d:
 
     @y.setter
     def y(self, value: int):
-        self._y = check_coordinate(value, self.HEIGHT)
+        self._y = check_coordinate(value, SCREEN_HEIGHT)
 
     def __eq__(self, other) -> bool:
         if not isinstance(other, Point2d):
@@ -43,7 +45,7 @@ class Point2d:
 
 
 class Vector2d:
-    __slots__ = ('_x', '_y')  # Изменил на защищенные атрибуты
+    __slots__ = ('_x', '_y')  
 
     def __init__(self, x: int, y: int):
         self._x = x
